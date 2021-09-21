@@ -1,29 +1,12 @@
-/* body {
-  background-color: black;
-} */
-/* .header-bar {
-  background-color: rosybrown;
-} */
-
 .name {
   color: #484848;
   font-size: 50px;
   font-weight: bold;
   font-family: monospace;
   letter-spacing: 7px;
-  /* cursor: pointer; */
   transition: 0.5s linear;
 }
 
-/* .name:hover span:nth-child(1) {
-  margin-right: 5px;
-}
-.name:hover span:nth-child(1):after {
-  content: "'";
-}
-.name:hover span:nth-child(2) {
-  margin-left: 30px;
-} */
 .name:hover {
   color: rgb(255, 255, 255);
   text-shadow: 0 0 20px rgb(64, 11, 255), 0 0 20px rgb(211, 55, 231),

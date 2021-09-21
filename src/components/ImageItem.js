@@ -4,22 +4,8 @@ import "./ImageItem.css";
 
 const ImageItem = ({ image }) => {
   const [isLiked, setIsLiked] = useState(false);
-  // const [spans, setSpans] = useState(0);
-  // const imageRef = useRef();
-
-  // useEffect(() => {
-  //   getSpans()
-  // }, [])
-
-  // const getSpans = () => {
-  //   const height = imageRef.current.clientHeight;
-  //   const spans = Math.ceil(height / 10) + 1;
-  //   setSpans(spans)
-  // }
 
   return (
-    // <Card style={{gridRowEnd: `span ${spans}`}}>
-    // style={{ gridRowEnd: `span ${this.state.spans}}
     <Card
       style={{
         width: "30rem",

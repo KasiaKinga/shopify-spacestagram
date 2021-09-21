@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "semantic-ui-css/semantic.min.css";
 import {
-  Container,
   Segment,
   Dimmer,
   Loader,
   Image,
   Header,
-  Icon,
 } from "semantic-ui-react";
 import nasa from "../api/nasa";
 import ImageList from "./ImageList";
