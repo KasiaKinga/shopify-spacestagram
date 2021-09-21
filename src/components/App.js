@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { Segment, Dimmer, Loader, Image, Header } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
-import {
-  Segment,
-  Dimmer,
-  Loader,
-  Image,
-  Header,
-} from "semantic-ui-react";
+import "./App.css";
 import nasa from "../api/nasa";
 import ImageList from "./ImageList";
-import "./App.css";
 
 const START_DATE = "2021-08-15";
-const END_DATE = "2021-09-10";
+const END_DATE = "2021-09-20";
 
 const App = () => {
   const [allImages, setAllImages] = useState("");
-
+  
   useEffect(() => {
     const getImages = async () => {
       const response = await nasa.get("/planetary/apod", {
