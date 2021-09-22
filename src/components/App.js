@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Segment, Dimmer, Loader, Image, Header } from "semantic-ui-react";
+import React, { useState, useEffect, Fragment } from "react";
+import { Dimmer, Loader } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 import nasa from "../api/nasa";
@@ -10,7 +10,7 @@ const END_DATE = "2021-09-20";
 
 const App = () => {
   const [allImages, setAllImages] = useState("");
-  
+
   useEffect(() => {
     const getImages = async () => {
       const response = await nasa.get("/planetary/apod", {
@@ -20,7 +20,7 @@ const App = () => {
         },
       });
       const filteredImages = response.data.filter(
-        (item) => item.media_type !== "video"
+        (item) => item.media_type === "image"
       );
       setAllImages(filteredImages);
     };
@@ -32,31 +32,30 @@ const App = () => {
       return <ImageList images={allImages} />;
     } else {
       return (
-        <Segment style={{ height: "100vh" }}>
+        <React.Fragment style={{ height: "100vh" }}>
           <Dimmer active inverted>
             <Loader size="large">Loading</Loader>
           </Dimmer>
-          <Image src="/images/wireframe/short-paragraph.png" />
-        </Segment>
+        </React.Fragment>
       );
     }
   };
 
   return (
-    <React.Fragment>
-      <Segment
-        size="huge"
-        textAlign="center"
-        style={{ width: "100vw" }}
-        color="violet"
-      >
-        <Header as="h1" className="name">
-          Spacestagram
-        </Header>
-      </Segment>
-
-      {renderContent()}
-    </React.Fragment>
+    <Fragment>
+      <header>
+        <h1>spacestagram</h1>
+      </header>
+      <main>
+        {/* when container is loading - waiting for new content aria-busy is true */}
+        <section
+          aria-live="polite"
+          aria-busy={allImages.length ? "false" : "true"}
+        >
+          {renderContent()}
+        </section>
+      </main>
+    </Fragment>
   );
 };
 

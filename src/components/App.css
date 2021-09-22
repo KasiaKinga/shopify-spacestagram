@@ -1,5 +1,22 @@
-.name {
-  color: #484848;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: rgb(58, 37, 131);
+  color: white;
+  transition: background-color 2s ease-out 100ms;
+  text-shadow: 0 0 20px rgb(80, 52, 182), 0 0 20px rgb(211, 55, 231),
+    0 0 40px rgb(255, 255, 255);
+}
+
+header:hover {
+  background-color: white;
+}
+
+h1 {
+  color: white;
   font-size: 50px;
   font-weight: bold;
   font-family: monospace;
@@ -7,8 +24,12 @@
   transition: 0.5s linear;
 }
 
-.name:hover {
+h1:hover {
   color: rgb(255, 255, 255);
   text-shadow: 0 0 20px rgb(64, 11, 255), 0 0 20px rgb(211, 55, 231),
     0 0 40px rgb(255, 255, 255);
+}
+
+main {
+  margin: 0 2rem 0 2rem;
 }
