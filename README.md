@@ -1,5 +1,7 @@
 # Spacestagram: Image-sharing from the final frontier
 
+<img src="./public/screenshot.png" />
+
 This is a solution to the Shopify take-home challenge which is the webpage that displays space images using NASA API, and allow the user to “like” and “unlike” their favourite images.
 
 ## Table of contents
@@ -63,7 +65,6 @@ This is a solution to the Shopify take-home challenge which is the webpage that 
 ## Author
 
 - [Kasia Gierat](https://www.linkedin.com/in/kasia-gierat/)
-
 
 ## Useful Links
 
