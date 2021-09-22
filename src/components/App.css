@@ -1,7 +1,5 @@
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   background-color: rgb(58, 37, 131);
